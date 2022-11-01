@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="BDDTemp" />
         <module name="CBDD_ONLINE_ONISTE_22" />
       </profile>
     </annotationProcessing>

@@ -1,25 +1,28 @@
 Feature: Login
 
-  @login @smoke
+  @login @smoke @test1
   Scenario: Login with valid email and password
-    Given i am at TalentTEK Homepage
-    And i enter my valid email address
-    And i enter my valid password
-    When i click on "Log In" button from Sign in page
-    Then i should be able to successfully login
+    Given I am at CSU homepage
+    And I click on the "Sign in here" linktext the top nav
+    And I enter my valid email address
+    And I enter my valid password
+    When I click on "Sign In" button from login page
+    Then I should be able to successfully login
 
- @login @smoke
+ @login @smoke @test2
   Scenario: Login with invalid email and valid password
-    Given i am at TalentTEK Homepage
-    And i enter my invalid email address
-    And i enter my valid password
-    When i click on Login button
-    Then i should not be able to successfully login
+   Given I am at CSU homepage
+   And I click on the "Sign in here" linktext the top nav
+   And I enter my invalid email address
+   And I enter my valid password
+   When I click on "Sign In" button from login page
+   Then I should not be able to successfully login
 
-  @login @smoke
+  @login @smoke @test3
   Scenario: Login with valid email and invalid password
-    Given i am at TalentTEK Homepage
-    And i enter my valid email address
-    And i enter my invalid password
-    When i click on Login button
-    Then i should not be able to successfully login
+    Given I am at CSU homepage
+    And I click on the "Sign in here" linktext the top nav
+    And I enter my valid email address
+    And I enter my invalid password
+    When I click on "Sign In" button from login page
+    Then I should not be able to successfully login

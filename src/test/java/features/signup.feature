@@ -1,24 +1,24 @@
-Feature: Signup
+Feature: Login
 
   Background:
-    Given i am at TalentTEK Homepage
+    Given I am at CSU homepage
 
-  @signup @smoke
-  Scenario:Create a brand new user
-    And i click on "Create new account" button from signup page
-    And i enter unique email address during signup
+  @signup @smoke @test4
+  Scenario: Signup with valid email and password
+    And I click on the "Sign in here" linktext the top nav
+    And I click on the "Create an Account" linktext
+    And I enter a valid first name
+    And I enter a valid last name
+    And I enter a valid phone number
+    And I enter a valid email address
+    And I enter a valid password
+    And I enter a valid confirm password
+    And I click on the "Next" button
+    And I enter a valid address
+    And I enter a valid city
+    And I select a state
+    And I enter a valid zip code
+    And I click on the "Next" button on the Address page
+    When I click on the "Use this address as entered"
 
-  @signup @smoke
-  Scenario Outline:Create a brand new user
-    And i click on "Create new account" button from signup page
-    And i enter unique First Name "<firstName>" during signup
-    And i enter unique Last Name "<lastName>" during signup
-    Examples:
-    |firstName|lastName|
-    |razib    |ahmed   |
-    |sakib    |khan    |
-    |puja     |chery   |
-    |sarkar   |vai     |
-
-
-
+    Then I should be able to successfully login
