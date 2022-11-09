@@ -1,4 +1,8 @@
+stepDef\hamburgerStep.class
 stepDef\loginStep.class
+pageObject\garagePage.class
+pageObject\homePage.class
+stepDef\garageStep.class
 stepDef\Hook.class
 base\setup.class
 stepDef\signUpStep.class

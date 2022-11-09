@@ -1,4 +1,4 @@
-Feature: Login
+Feature: SignUp
 
   Background:
     Given I am at CSU homepage
